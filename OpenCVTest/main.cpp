@@ -2,8 +2,8 @@
 //  main.cpp
 //  OpenCVTest
 //
-//  Created by 胡萌 on 17/11/19.
-//  Copyright © 2017年 胡萌. All rights reserved.
+//  Created by HuMeng on 17/11/19.
+//  Copyright © 2017年 HuMeng. All rights reserved.
 //
 
 #include <iostream>
@@ -15,13 +15,15 @@ using namespace cv;
 int main(int argc, const char * argv[])
 {
     Mat img;
-    img = imread("/Users/humeng/Pictures/1431573574932.jpg");
+    img = imread("/Users/jade/Pictures/IMG_1756.jpg");
 
-    namedWindow("OpenCV Test");
+    namedWindow("OpenCVTest", -1);
 
-    imshow("OpenCV Test", img);
+    imshow("OpenCVTest", img);
 
-    waitKey(6000);
+    waitKey(0);
+
+    destroyWindow("OpenCVTest");
 
     return 0;
 }
