@@ -12,10 +12,13 @@
 
 using namespace cv;
 
-int main(int argc, const char * argv[])
-{
-    Mat img;
-    img = imread("/Users/jade/Pictures/IMG_1756.jpg");
+int main(int argc, const char *argv[]) {
+    if (argc < 2) {
+        std::cout << "Usage: " << argv[0] << " path_to_image" << std::endl;
+        return -1;
+    }
+
+    Mat img = imread(argv[1]);
 
     namedWindow("OpenCVTest", -1);
 
